@@ -6,7 +6,7 @@ All my knowledge in one place. Courses, research and anything else I find useful
 ## 🚀 About me
 #### Hi 👋, I'm Breno Lopes, brazilian developer and I'm always looking forward to improve my knowledge.
 
-## 📖 Reference
+## 📖 Acknowledgements
 
  - [Alura](https://www.alura.com.br/) 🇧🇷
  - [Origamid](https://www.origamid.com/) 🇧🇷
