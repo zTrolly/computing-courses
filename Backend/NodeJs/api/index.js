@@ -1,9 +1,14 @@
 import AP from 'apollo-server'
 import { makeExecutableSchema } from "@graphql-tools/schema";
 
-const persons = [
+const authors = [
     {
         id:1,
+        name: "Ronaldo",
+        age: 18,
+    },
+    {
+        id:2,
         name: "Ronaldo",
         age: 18,
     }
@@ -13,6 +18,7 @@ const books = [
         id:1,
         title: "Senhor dos aneis",
         year: 2002,
+        author: 1
     },
     {
         id:2,
@@ -33,11 +39,12 @@ const typeDefs = `
         id: ID!
         title: String!
         year: Int!
+        author: Author
     }
 
-    type Person {
+    type Author {
         id:ID!
-        name: String!
+        name: String
         age: Int
     }
 
@@ -47,10 +54,6 @@ const typeDefs = `
             title: String
             year: Int
         ):[Book]
-
-        Person(
-            id:ID
-        ):[Person]
     }
 
 `
@@ -70,10 +73,10 @@ const resolvers = {
             }
             return books
         },
-
-        Person: (_, params) => {
-            console.log("peron" + params)
-            return persons
+    },
+    Book: {
+        author: (parent) => {
+            return authors.find(author => author.id == parent.author)
         }
     }
 }
@@ -89,7 +92,7 @@ const server = new AP.ApolloServer({
 
 server.init = () =>{
     server.listen(process.env.PORT || 3000, '0.0.0.0').then(() => {
-        console.log(`eu certo o servidor está escutando na porta 3000`)
+        console.log(`Deu certo o servidor está escutando na porta 3000`)
     })
 }
 
