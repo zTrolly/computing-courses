@@ -1,13 +1,19 @@
 {
-  "name": "NodeJs",
+  "name": "aaaa",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "dev":"nodemon index.js"
+  },
   "dependencies": {
     "apollo-server": "^3.9.0",
     "graphql": "^16.5.0",
     "graphql-tools": "^8.2.12"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 
 }
