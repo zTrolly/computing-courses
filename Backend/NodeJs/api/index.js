@@ -9,7 +9,7 @@ const authors = [
     },
     {
         id:2,
-        name: "Ronaldo",
+        name: "Ronaldo2",
         age: 18,
     }
 ]
@@ -24,6 +24,8 @@ const books = [
         id:2,
         title: "Clube da Luta",
         year: 2020,
+        author: 2
+
     },
     {
         id:3,
