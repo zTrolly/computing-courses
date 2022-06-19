@@ -63,7 +63,6 @@ const typeDefs = `
 const resolvers = {
     Query:{
         Books: (_ , params) => {
-            console.log(params)
             if(params.id){
                 return books.filter(book => book.id == params.id)
             }
