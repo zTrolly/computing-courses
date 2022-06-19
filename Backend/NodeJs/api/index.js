@@ -1,4 +1,4 @@
-import AP from 'apollo-server'
+import AP, { ApolloError } from 'apollo-server'
 import { makeExecutableSchema } from "@graphql-tools/schema";
 
 const authors = [
@@ -63,6 +63,9 @@ const typeDefs = `
 const resolvers = {
     Query:{
         Books: (_ , params) => {
+            if (params.id == 1){
+                throw new ApolloError("not found")
+            }
             if(params.id){
                 return books.filter(book => book.id == params.id)
             }
