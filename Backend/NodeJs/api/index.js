@@ -18,7 +18,7 @@ const books = [
         id:1,
         title: "Senhor dos aneis",
         year: 2002,
-        author: 1
+        author: ""
     },
     {
         id:2,
@@ -41,7 +41,7 @@ const typeDefs = `
         id: ID!
         title: String!
         year: Int!
-        author: Author
+        author: Author!
     }
 
     type Author {
@@ -63,11 +63,9 @@ const typeDefs = `
 const resolvers = {
     Query:{
         Books: (_ , params) => {
-            if (params.id == 1){
-                throw new ApolloError("not found")
-            }
+
             if(params.id){
-                return books.filter(book => book.id == params.id)
+                return books //.filter(book => book.id == params.id)
             }
             if(params.title){
                 return books.filter(book => book.title == params.title)
