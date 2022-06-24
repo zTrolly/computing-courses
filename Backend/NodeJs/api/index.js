@@ -65,7 +65,7 @@ const resolvers = {
         Books: (_ , params) => {
 
             if(params.id){
-                return books //.filter(book => book.id == params.id)
+                return books.filter(book => book.id == params.id)
             }
             if(params.title){
                 return books.filter(book => book.title == params.title)
