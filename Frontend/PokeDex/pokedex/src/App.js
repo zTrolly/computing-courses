@@ -7,6 +7,7 @@ function App() {
   const [pokemonName, setPokemonName] = useState('');
   const [pokemonType, setPokemonType] = useState('');
   const [pokemonWeight, setPokemonWeight] = useState('');
+  const[error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
 
