@@ -4,4 +4,4 @@ const API = axios.create({
     baseURL: 'https://pokeapi.co/api/v2/'
 });
 
-return API; 
+return API;  // nn sei se ta certo
