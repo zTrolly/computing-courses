@@ -21,19 +21,19 @@ function App() {
     <div className="App">
       <header className="App-header">
       <h1>Pokedex</h1>
-      <p>Digite o nome do pokemon para ser pesquisado...</p>
+      <p>Insert a Pokemon name for search</p>
       </header>
 
       <form onSubmit={handleSubmit}>
         <input
           value={pokemonType}
-          placeholder="Digite o nome do pokemon"
+          placeholder="Write the pokemon's name"
           onChange={handleChange}
         />
 
         <button type="submit">
-            {isLoading ? 'Carregando...' : 'Pesquisar'}
-            Pesquisar
+            {isLoading ? 'Loading...' : 'Search'}
+            Search
           </button>  
       </form>
     </div>
