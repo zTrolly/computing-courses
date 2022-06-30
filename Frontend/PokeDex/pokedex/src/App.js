@@ -20,7 +20,7 @@ function App() {
   return (
 
     <div className="App">
-      <header className="App-header">
+      <header className="App-header"> 
         
     <h1>Teste do h1</h1> 
       </header> 
