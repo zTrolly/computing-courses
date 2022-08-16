@@ -18,7 +18,7 @@ import java.util.*;
   }
     public static void main(String[] args) {
       int[] vetor = {10,15,3,7}; // setar o vetor
-      System.out.println(verifica(vetor, 17));
+      System.out.println(verifica(vetor, 2));
 
     }
   
